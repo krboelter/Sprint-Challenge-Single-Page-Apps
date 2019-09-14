@@ -1,10 +1,11 @@
-import React, { useEffect } from "react";
+import React from "react";
 import TabNav from "./components/TabNav.js";
 import Header from "./components/Header.js";
-import { BrowserRouter as Router } from "react-router-dom";
-import axios from "axios";
+import { Switch, Route } from "react-router-dom";
 import WelcomePage from "./components/WelcomePage";
-import CharacterCard from "./components/CharacterCard";
+import CharacterList from "./components/CharacterList";
+import LocationsList from "./components/LocationsList";
+// import LocationsList from "./components/LocationsList.js";
 
 
 export default function App() {
@@ -20,9 +21,13 @@ export default function App() {
     <main>
       <Header />
       <TabNav />
-      <WelcomePage />
-      <CharacterCard />
-
+      
+      <Switch>
+        <Route exact path="/" component={WelcomePage} />
+        <Route exact path="/characters" component={CharacterList} />
+        <Route exact path="/locations" component={LocationsList} />
+        {/* <Router exact path="/episodes" component={WelcomePage} /> */}
+      </Switch>
     </main>
   );
 }

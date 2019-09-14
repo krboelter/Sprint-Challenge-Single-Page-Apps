@@ -4,22 +4,24 @@ import Header from "./components/Header.js";
 import { BrowserRouter as Router } from "react-router-dom";
 import axios from "axios";
 import WelcomePage from "./components/WelcomePage";
+import CharacterCard from "./components/CharacterCard";
 
-// useEffect(() => {
-  //   axios.get(`https://rickandmortyapi.com/api/character/`)
-  //     .then(res => {
-  //       console.log(res)
-  //     })
-  //     .catch(err => console.log(err))
-  // }, [])
 
 export default function App() {
-
+  // useEffect(() => {
+  //     axios.get(`https://rickandmortyapi.com/api/character/`)
+  //       .then(res => {
+  //         console.log(res)
+  //       })
+  //       .catch(err => console.log(err))
+  //   }, [])
+  
   return (
     <main>
       <Header />
       <TabNav />
       <WelcomePage />
+      <CharacterCard />
 
     </main>
   );

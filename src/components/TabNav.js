@@ -21,18 +21,20 @@ export default function TabNav() {
                     as={NavLink}
                     to={'/'}
                 />
-                <Menu.Item 
+                <Menu.Item
                     name='characters'
                     as={NavLink}
                     to={'/characters'}
                 />
-                <Menu.Item 
+                <Menu.Item
                     name='locations'
                     as={NavLink}
                     to={'/locations'}
                 />
-                <Menu.Item 
+                <Menu.Item
                     name='episodes'
+                    as={NavLink}
+                    to={'/episodes'}
                 />
             </Menu>
         </div>

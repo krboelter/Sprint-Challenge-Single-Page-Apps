@@ -1,10 +1,25 @@
 import React from "react";
-import LocationsList from "./LocationsList";
+import styled from "styled-components";
 
-export default function LocationCard({ name, type, dimension, residents }) {
+export default function LocationCard(props) {
+
+    const Container = styled.div`
+        width: 45%;
+        height: 150px;
+        margin: 10px 10px;
+        border: 2px solid black;
+        box-shadow: 0 0 8px gray;
+        border-radius: 8px;
+        padding: 10px;
+    `
+
   return (
-      <span className="location-container">
-        <LocationsList />
-      </span>
+      <Container>
+          <h2>{props.location.name}</h2>
+          <p>Planet: {props.location.dimension}</p>
+          <div>
+              <p>{props.location.residents.length} residents</p>
+          </div>
+      </Container>
     )
 }

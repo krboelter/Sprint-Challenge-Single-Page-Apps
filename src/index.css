@@ -37,3 +37,15 @@ main {
 header h1 {
   text-align: center;
 }
+
+.location-container {
+  display: flex;
+  justify-content: space-around;
+  flex-wrap: wrap;
+}
+
+.episode-container {
+    display: flex;
+    justify-content: space-around;
+    flex-wrap: wrap;
+}
